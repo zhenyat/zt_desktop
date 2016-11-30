@@ -7,4 +7,4 @@
 
 require 'zt_desktop'   # lib/zt_desktop.rb
 
-ZtDesktop::Greeting.hi
+ZtDesktop::Greeting.hi if $debug
