@@ -18,6 +18,12 @@ options = ZtDesktop::OptparseCommand.parse(ARGV)
 
 ZtMethods.get_names options
 
+if $mode == 'generate'
+  require 'zt_desktop/create_fs'
+  require 'zt_desktop/copy_files'
+else
+  require 'zt_desktop/remove_app'
+end
 
 module ZtDesktop
   # Just initial test

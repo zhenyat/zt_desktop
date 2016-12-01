@@ -178,7 +178,7 @@ module ZtMethods
   end
 
   ##############################################################################
-  # Gets Model names (capitalized and plural)
+  # Gets App name
   ##############################################################################
   def self.get_names options
 
@@ -198,9 +198,9 @@ module ZtMethods
       exit
     end
 
-    # Define App name & paths
-
-    upper_count = ARGV[1].scan(/\p{Upper}/).count  # Number of uppercase characters
+    # Define App name & path
+    $project_name = ARGV[1]
+    upper_count   = $project_name.scan(/\p{Upper}/).count  # Number of uppercase characters
 
     if upper_count > 1                # Compound name (e.g. RedWineGlass)
       $app_name = ARGV[1][0].downcase
@@ -217,25 +217,10 @@ module ZtMethods
     end
 
     # App paths
-    parent_dir        = `pwd`.chomp    # chomp without arguments removes "\n" or "\r\n" if any
-    $app_root         = "#{parent_dir}/#{$app_name}"
-    $controllers_path = "#{$app_root}/app/controllers"
-    $models_path      = "#{$app_root}/app/models"
-    $views_path       = "#{$app_root}/app/views"
-
-    $config_path      = "#{$app_root}/config"
-
-    $db_path          = "#{$app_root}/db"
-    $migrate_path     = "#{$app_root}/db/migrate"
+    parent_dir = `pwd`.chomp    # chomp without arguments removes "\n" or "\r\n" if any
+    $app_root  = "#{parent_dir}/#{$app_name}"
 
     # Enumerated options
     #$enum = options[:enum] if options[:enum].size > 0
-
-    if $debug
-      puts "mode = #{$mode}"
-      puts "app_name = #{$app_name}"
-      puts "app_root = #{$app_root}"
-    end
-
   end
 end
