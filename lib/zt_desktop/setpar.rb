@@ -40,7 +40,7 @@ TEMPLATES_PATH = File.join(GEM_PATH, 'templates')
 # Variables
 
 $relative_paths = [
-  'app', 'app/controllers', 'app/models', 'app/views', 'app/views/dummies',
+  'app', 'app/controllers', 'app/models', 'app/views', 'app/views/members',
   'config', 'db', 'db/migrate', 'lib', 'logs'
 ]
 

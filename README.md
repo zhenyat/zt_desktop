@@ -24,7 +24,7 @@ Then update / create files:
 
 $ rm zt_desktop-0.1.0.gem; git add .; gem build zt_desktop.gemspec; sudo gem install --local zt_desktop-0.1.0.gem
 
-$ bin/zt_desktop
+$ bin/zt_desktop or:  zt_desktop (as alias)
 
 ## Contributing
 

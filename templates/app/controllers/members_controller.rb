@@ -1,12 +1,12 @@
 require './app/controllers/application_controller'
 
-class DummiesController < ApplicationController
+class MembersController < ApplicationController
 
   def self.index
     db      = DbHandle::open
-    dummies = Dummy.all
+    members = Member.all
     DbHandle::close(db)
 
-    DummiesViewIndex.load(dummies)
+    MembersViewIndex.load(members)
   end
 end

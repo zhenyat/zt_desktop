@@ -1,6 +1,6 @@
 development:
   adapter:  sqlite3
-  database: db/my_db.sqlite3
+  database: db/family.sqlite3
   pool:     5
   timeout:  5000
   logger:   true

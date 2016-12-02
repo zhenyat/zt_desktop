@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Desktop App generation}
   spec.description   = %q{Tool to generate Desktop App folders and files aka RoR structure}
-  spec.homepage      =  "http://dummy.com"
+  spec.homepage      =  "http://Member.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
